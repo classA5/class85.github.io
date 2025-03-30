@@ -1,0 +1,118 @@
+/* Reset cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: url('background2.gif') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Wrapper để căn giữa hộp đăng nhập */
+  .login-wrapper {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Hộp đăng nhập với nền mờ và viền bo tròn */
+  .login-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    text-align: center;
+  }
+  
+  .login-card h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  /* CSS cho thông báo lỗi */
+.error-message {
+    margin-top: 15px;
+    color: #ff4d4d;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.error-message.show {
+    opacity: 1;
+}
+  /* Nhóm input với hiệu ứng label chuyển động */
+  .input-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .input-group input:focus {
+    border-color: #a6c1ee;
+  }
+  
+  /* Label ban đầu nằm chồng lên input */
+  .input-group label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    padding: 0 5px;
+    color: #aaa;
+    pointer-events: none;
+    transition: all 0.3s;
+  }
+  
+  /* Khi input có giá trị hoặc focus, label chuyển lên trên */
+  .input-group input:focus + label,
+  .input-group input:not(:placeholder-shown) + label {
+    top: 0;
+    font-size: 12px;
+    color: #a6c1ee;
+    background: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Nút login */
+  button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    background: #a6c1ee;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background: #89a9d3;
+  }
+  .fade-out {
+    animation: fadeOut 1s forwards;
+  }
+  
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }  
